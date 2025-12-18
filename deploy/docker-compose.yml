@@ -1,0 +1,39 @@
+services:
+  server:
+    build: ./server
+    container_name: hashbrute-server
+    working_dir: /app
+    env_file:
+      - ./server/.env
+    ports:
+      - "0.0.0.0:3001:3001"  
+    networks:
+      - hashbrute-net
+
+  front:
+    build: ./front
+    container_name: hashbrute-front
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_API_URL=http://localhost/api
+    ports:
+      - "0.0.0.0:3000:3000"  
+    networks:
+      - hashbrute-net
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: hashbrute-nginx
+    ports:
+      - "0.0.0.0:80:80"  
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - front
+      - server
+    networks:
+      - hashbrute-net
+
+networks:
+  hashbrute-net:
+    driver: bridge
