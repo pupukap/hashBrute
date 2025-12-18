@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: "Verdana", "Tahoma", sans-serif;
+  background: #00111a url("https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif")
+    repeat;
+  color: #ffffff;
+}
+
+/* Общий контейнер */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Логин */
+
+.App-login {
+  background: radial-gradient(circle at top, #ff0000 0, #00111a 60%);
+}
+
+.title-glow {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #ff0000;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  background: #000033;
+  border: 3px solid #00ff00;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.input-2000 {
+  width: 220px;
+  padding: 6px;
+  margin-right: 8px;
+  border: 2px inset #cccccc;
+  background: #000022;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+}
+
+.btn-2000 {
+  padding: 6px 16px;
+  border: 2px outset #cccccc;
+  background: linear-gradient(#ff0000, #990000);
+  color: #ffff00;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-2000:hover {
+  background: linear-gradient(#00aa00, #006600);
+}
+
+.snow-footer {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 3px #00ffff;
+}
+
+/* Форум */
+
+.forum-bg {
+  background: #003300 url("https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif")
+    repeat;
+}
+
+.forum-container {
+  width: 80%;
+  max-width: 900px;
+  background: #000033;
+  border: 4px ridge #ffffff;
+  padding: 10px;
+}
+
+.forum-header {
+  background: #000066;
+  border-bottom: 3px solid #ff0000;
+  margin-bottom: 10px;
+  color: #ffff00;
+}
+
+.forum-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #000022;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.forum-table th {
+  background: #003366;
+  border: 1px solid #ffffff;
+  padding: 4px;
+}
+
+.forum-table td {
+  border: 1px solid #666666;
+  padding: 4px;
+}
+
+.forum-row-highlight {
+  background: #330000;
+}
+
+.forum-footer {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #00ff00;
+}
+
+/* Флаг подчёркиваем */
+
+.flag-text {
+  color: #ff4444;
+  font-family: "Courier New", monospace;
+  background: #000000;
+  padding: 2px 4px;
+  border: 1px dashed #ffff00;
+}
+
+/* Псевдо-<blink> */
+blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
