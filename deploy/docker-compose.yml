@@ -1,3 +1,5 @@
+name: "hashbrute"
+
 services:
   server:
     build: ./server
